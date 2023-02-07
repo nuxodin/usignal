@@ -32,8 +32,8 @@ export class Signal {
     this._ = value;
   }
 
-  /** @returns {T} */
-  then() { return this.value }
+  /** @param {function} resolve */
+  then(resolve) { resolve(this.value) }
 
   /** @returns {T} */
   toJSON() { return this.value }
